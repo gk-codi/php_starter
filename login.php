@@ -22,7 +22,7 @@ if ( isset( $_POST['form_type'] ) ) {
 			// lets log user in
 			var_dump($_SESSION);
 			$_SESSION['user_id'] = $user_row['id'];
-			$_SESSION['name']    = $user_row['name'];
+//			$_SESSION['name']    = $user_row['name'];
 			
 			header('Location: /');
 		}

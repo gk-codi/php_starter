@@ -26,12 +26,22 @@ try {
 	 * Create tables                       *
 	 **************************************/
 	
-	// Create table messages
+	// Create table users
 	$db->exec( "CREATE TABLE IF NOT EXISTS Users (
 				   id integer NOT NULL CONSTRAINT Users_pk PRIMARY KEY,
 				   name varchar(255) NOT NULL,
 				   password text NOT NULL,
 				   email text NOT NULL UNIQUE,
+				   created_at datetime NOT NULL,
+				   updated_at datetime NULL,
+				   deleted_at datetime NULL
+                   )" );
+	
+	// Create table sliders
+	$db->exec( "CREATE TABLE IF NOT EXISTS Sliders (
+				   id integer NOT NULL CONSTRAINT Users_pk PRIMARY KEY,
+				   title varchar(255) NOT NULL,
+				   image_src text NOT NULL UNIQUE,
 				   created_at datetime NOT NULL,
 				   updated_at datetime NULL,
 				   deleted_at datetime NULL

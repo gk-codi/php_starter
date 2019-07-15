@@ -7,8 +7,8 @@ require_once './middleware/isAuthenticated.php';
 //error_reporting( E_ALL );
 require_once './database/connect.php';
 
-$users_query = 'SELECT * FROM Users';
-$users       = $db->query( $users_query )->fetchAll();
+$sliders_query = 'SELECT * FROM Sliders';
+$sliders       = $db->query( $sliders_query )->fetchAll();
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,7 +35,7 @@ $users       = $db->query( $users_query )->fetchAll();
         <?php require_once './templates/nav.php' ?>
     </div>
     <div class="content">
-    <?php require_once './templates/users/index.php'; ?>
+    <?php require_once './templates/sliders/index.php'; ?>
     </div>
 </div>
 </body>
