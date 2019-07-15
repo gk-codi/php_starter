@@ -1,0 +1,31 @@
+html, body , .layout{
+    height: 100%;
+}
+
+.layout {
+    display:               grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:   "bar bar" "side content"
+}
+
+.layout > .bar {
+    background:          red;
+    grid-area:           bar;
+    display:             grid;
+    grid-template-areas: ". . . logo";
+}
+.layout > .side {
+    grid-area: side;
+}
+.layout > .content {
+    grid-area: content;
+}
+.bar > .user-card {
+    grid-area: logo;
+    display: grid;
+    justify-content: center;
+}
+.user-image img {
+    width: 80px;
+}
